@@ -8,6 +8,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - uses : actions/setup-python@v2
+      with :
+        python-version: '3.8.8'
     - name: Download Ngrok
       run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Extract Ngrok Archive
